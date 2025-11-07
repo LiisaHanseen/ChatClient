@@ -12,7 +12,22 @@ namespace ChatClient
         // ----------------------------------------------------- Programmets start - Main ----------------------------------------------------------
         static async Task Main()
         {
-            // hantering av användarnamn, felhantering, ansluten, loop, kommandon, meddelanden, hsitorik, avslutning
+            Console.WriteLine("Välkommen till chatten!");
+            Console.WriteLine("Ange ett användarnamn: ");
+            string username = Console.ReadLine()?.Trim() ?? "username";
+
+            while (string.IsNullOrWhiteSpace(username))
+            {
+                Console.WriteLine("Användarnamnet kan inte vara tomt. Vänligen ange ett giltigt användarnamn: ");
+                username = Console.ReadLine()?.Trim() ?? "username";
+            }
+
+            // await
+
+            Console.WriteLine("Skriv ett meddelande eller ett kommando (/help):");
+            // loop, kommandon, meddelanden, hsitorik, avslutning
+
+            Console.WriteLine("Avslutar...");
         }
     }
 }

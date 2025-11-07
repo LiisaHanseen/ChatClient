@@ -10,6 +10,9 @@ namespace ChatClient_Exam
 {
     public class SocketManager
     {
+        private static SocketIO _client;
+        private static readonly string Path = "/sys25d";
+        public static List<string> messages;
         // server, eventnamn
         // hantering av meddelanden, anslutning, frånkoppling, väntetid, felhantering
     }
